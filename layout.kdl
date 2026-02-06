@@ -1,4 +1,11 @@
 layout {
+
+    // default status bar with session-name and tab list at the top
+    pane size=1 borderless=true {
+        plugin location="zellij:tab-bar"
+    }
+
+    // user defined panes
     pane split_direction="vertical" {
         // files tab
         pane command="tree" name="files" size="15%" {
@@ -12,5 +19,11 @@ layout {
                 pane name="terminal"
             }
         }
-    }    
+    }
+
+    // default help status bar at the bottom
+    pane size=1 borderless=true {
+        plugin location="zellij:status-bar"
+    }
+    
 }
