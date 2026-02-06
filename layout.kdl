@@ -1,0 +1,16 @@
+layout {
+    pane split_direction="vertical" {
+        // files tab
+        pane command="tree" name="files" size="15%" {
+            args "-C" "-L" "2" "--gitignore"
+            start_suspended false
+        }
+        pane size="85%" {
+            pane name="working area" focus=true size="75%"
+            pane size="25%" stacked=true {
+                pane name="server" expanded=true
+                pane name="terminal"
+            }
+        }
+    }    
+}
